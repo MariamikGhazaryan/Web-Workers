@@ -1,5 +1,7 @@
 <button (click)="onCalculateSum()">Calculate Sum</button>
-<div [ngStyle]="{'background-color': color}">
+<button (click)="onCancel()" [disabled]="!worker">Cancel Calculation</button>
+<div class='sum-div' [ngStyle]="{'background-color': color}">
   <div> Sum: {{sum}}  </div>
 </div>
+<div *ngIf="errorMessage">Error : {{errorMessage}}</div>
 <button (click)="onBackGroundChange()">Change Background</button>
